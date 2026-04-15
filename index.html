@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--
+    PIRATE SHIPS LANDING PAGE
+    ==========================
+    Структура:
+    1. Navigation (шапка)
+    2. Hero (главный баннер)
+    3. About (описание игры)
+    4. Features (3 карточки фичей)
+    5. Screenshots (карусель скриншотов)
+    6. Closing CTA (финальный призыв)
+    7. Footer (подвал)
+    
+    Для редактирования ищи комментарии "ЗАМЕНИТЬ"
+-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ЗАМЕНИТЬ: заголовок страницы -->
+    <title>Pirate Ships - PvP Pirate Ship Building & Battles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION - шапка сайта
+         ============================================ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Логотип в шапке -->
+            <a href="#" class="nav-logo">
+                <!-- ЗАМЕНИТЬ: путь к логотипу шапки -->
+                <img src="images/logo_header.png" alt="Pirate Ships">
+            </a>
+            
+            <!-- Меню -->
+            <ul class="nav-menu">
+                <!-- ЗАМЕНИТЬ: пункты меню -->
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Press Kit</a></li>
+            </ul>
+            
+            <!-- Кнопка мобильного меню -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - главный баннер
+         Замени KeyArt.jpg на свою картинку
+         ============================================ -->
+    <section class="hero">
+        <div class="hero-bg">
+            <!-- ЗАМЕНИТЬ: путь к фоновой картинке hero -->
+            <img src="images/KeyArt.jpg" alt="Pirate Ships Key Art">
+        </div>
+        
+        <!-- Мерцающие звёзды на небе -->
+        <div class="stars-container">
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+            <div class="star star-4"></div>
+            <div class="star star-5"></div>
+            <div class="star star-6"></div>
+            <div class="star star-7"></div>
+            <div class="star star-8"></div>
+            <div class="star star-9"></div>
+            <div class="star star-10"></div>
+            <div class="star star-11"></div>
+            <div class="star star-12"></div>
+            <div class="star star-13"></div>
+            <div class="star star-14"></div>
+            <div class="star star-15"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <!-- ЗАМЕНИТЬ: путь к главному логотипу -->
+                <img src="images/logo_main.png" alt="Pirate Ships">
+            </h1>
+            <!-- ЗАМЕНИТЬ: ссылка на кнопке -->
+            <a href="#" class="cta-button-img">
+                <img src="images/Play_BTN.png" alt="Play for Free">
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION - описание игры
+         ============================================ -->
+    <section class="about">
+        <div class="container">
+            <p class="about-text">
+                <!-- ЗАМЕНИТЬ: текст описания игры -->
+                PvP-игра о строительстве кораблей и битвах для настоящих любителей пиратской эстетики. Сражайтесь в онлайн-режиме вместе с другими игроками или побеждайте их. Примите командование над видавшей виды старой шхуной и превратите ее в самый мощный линкор на всех семи морях!
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION - 3 карточки фичей
+         Замени картинки и текст под свои
+         ============================================ -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Game Features</h2>
+            <div class="features-grid">
+                
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <!-- ЗАМЕНИТЬ: картинка фичи 1 -->
+                        <img src="images/feature_shipbuilding.png" alt="Ship Building" class="feature-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <!-- ЗАМЕНИТЬ: заголовок фичи 1 -->
+                        <h3 class="feature-card-title">Создавайте мощные корабли</h3>
+                        <!-- ЗАМЕНИТЬ: текст фичи 1 -->
+                        <p class="feature-card-text">
+                            Стройте корабли, экипируйте их пушками и снаряжением. Более десятка типов кораблей — от шхун до линкоров!
+                        </p>
+                        <p class="feature-card-text">
+                            Добывайте элементы снаряжения, находите лучшие комбинации и становитесь самым сильным пиратским лордом!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <!-- ЗАМЕНИТЬ: картинка фичи 2 -->
+                        <img src="images/feature_pvp.jpg" alt="PvP Battles" class="feature-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <!-- ЗАМЕНИТЬ: заголовок фичи 2 -->
+                        <h3 class="feature-card-title">Ожесточенные сражения</h3>
+                        <!-- ЗАМЕНИТЬ: текст фичи 2 -->
+                        <p class="feature-card-text">
+                            Сражайтесь с кораблями реальных игроков. Доминируйте на арене и займите первое место в таблице лидеров.
+                        </p>
+                        <p class="feature-card-text">
+                            Присоединяйтесь к масштабным морским баталиям с детализированной визуализацией.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <!-- ЗАМЕНИТЬ: картинка фичи 3 -->
+                        <img src="images/feature_pve.png" alt="PvE Campaign" class="feature-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <!-- ЗАМЕНИТЬ: заголовок фичи 3 -->
+                        <h3 class="feature-card-title">Кампания с PvE</h3>
+                        <!-- ЗАМЕНИТЬ: текст фичи 3 -->
+                        <p class="feature-card-text">
+                            Станьте частью захватывающей карибской истории. Добывайте ресурсы и получите шанс открыть легендарные корабли.
+                        </p>
+                        <p class="feature-card-text">
+                            Бесконечные часы веселых пиратских приключений ждут вас!
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SCREENSHOTS SECTION - карусель скриншотов
+         Добавляй/удаляй скриншоты по аналогии
+         ============================================ -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous screenshot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="screenshots-carousel">
+                    
+                    <!-- СКРИНШОТ 1 -->
+                    <div class="screenshot-item" data-index="0">
+                        <img src="images/screenshot1.jpg" alt="Screenshot 1" class="screenshot-img">
+                    </div>
+                    
+                    <!-- СКРИНШОТ 2 -->
+                    <div class="screenshot-item" data-index="1">
+                        <img src="images/screenshot2.jpg" alt="Screenshot 2" class="screenshot-img">
+                    </div>
+                    
+                    <!-- СКРИНШОТ 3 -->
+                    <div class="screenshot-item" data-index="2">
+                        <img src="images/screenshot3.jpg" alt="Screenshot 3" class="screenshot-img">
+                    </div>
+                    
+                    <!-- СКРИНШОТ 4 -->
+                    <div class="screenshot-item" data-index="3">
+                        <img src="images/screenshot4.jpg" alt="Screenshot 4" class="screenshot-img">
+                    </div>
+                    
+                    <!-- СКРИНШОТ 5 -->
+                    <div class="screenshot-item" data-index="4">
+                        <img src="images/screenshot5.jpg" alt="Screenshot 5" class="screenshot-img">
+                    </div>
+                    
+                    <!-- ДОБАВИТЬ НОВЫЙ СКРИНШОТ:
+                    <div class="screenshot-item" data-index="5">
+                        <img src="images/screenshot6.jpg" alt="Screenshot 6" class="screenshot-img">
+                    </div>
+                    -->
+                    
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" aria-label="Next screenshot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         LIGHTBOX - просмотр скриншотов на весь экран
+         Не трогай - работает автоматически
+         ============================================ -->
+    <div class="lightbox" id="lightbox">
+        <!-- Кнопка закрытия -->
+        <button class="lightbox-close" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <!-- Стрелка назад -->
+        <button class="lightbox-arrow lightbox-arrow-prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        
+        <!-- Стрелка вперед -->
+        <button class="lightbox-arrow lightbox-arrow-next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        
+        <!-- Контейнер для картинки -->
+        <div class="lightbox-content" id="lightbox-content">
+            <img src="" alt="Screenshot" class="lightbox-img" id="lightbox-img">
+        </div>
+    </div>
+
+    <!-- ============================================
+         CLOSING CTA - финальный призыв к действию
+         ============================================ -->
+    <section class="closing-cta">
+        <div class="container">
+            <!-- ЗАМЕНИТЬ: финальная фраза -->
+            <p class="closing-text">
+                Поднимайте «Весёлого Роджера», запасайтесь крепким ромом и отправляйтесь в плавание в увлекательной пиратской авантюре!
+            </p>
+            <!-- ЗАМЕНИТЬ: ссылка на кнопке -->
+            <a href="#" class="cta-button-img">
+                <img src="images/Play_BTN.png" alt="Play for Free">
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - подвал с ссылками
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <!-- ЗАМЕНИТЬ: ссылки в футере -->
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Legal Information</a>
+                <a href="#" class="footer-link">Cookie Settings</a>
+            </div>
+            <!-- ЗАМЕНИТЬ: копирайт -->
+            <p class="footer-copyright">© 2026 Pirate Ships. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // MOBILE MENU
+        // ============================================
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // ============================================
+        // SCREENSHOTS CAROUSEL
+        // ============================================
+        const carousel = document.querySelector('.screenshots-carousel');
+        const prevBtn = document.querySelector('.carousel-arrow-prev');
+        const nextBtn = document.querySelector('.carousel-arrow-next');
+        const items = document.querySelectorAll('.screenshot-item');
+
+        // Ширина одного скриншота + отступ
+        const scrollStep = 500; // На сколько пикселей скроллить при клике на стрелку
+
+        // Стрелка "назад" - скроллим влево
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        });
+
+        // Стрелка "вперед" - скроллим вправо
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        });
+
+        // ============================================
+        // DRAG TO SCROLL (свободное перетаскивание)
+        // ============================================
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('grabbing');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            carousel.classList.remove('grabbing');
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+            carousel.classList.remove('grabbing');
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 1.5; // множитель скорости
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch поддержка для мобилок
+        let touchStartX;
+        let touchScrollLeft;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].pageX - carousel.offsetLeft;
+            touchScrollLeft = carousel.scrollLeft;
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', (e) => {
+            const x = e.touches[0].pageX - carousel.offsetLeft;
+            const walk = (x - touchStartX) * 1.5;
+            carousel.scrollLeft = touchScrollLeft - walk;
+        }, { passive: true });
+
+        // ============================================
+        // LIGHTBOX (просмотр на весь экран)
+        // ============================================
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-arrow-prev');
+        const lightboxNext = document.querySelector('.lightbox-arrow-next');
+        
+        let currentLightboxIndex = 0;
+        const screenshotItems = Array.from(items);
+
+        // Открытие lightbox при клике на скриншот
+        screenshotItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentLightboxIndex = index;
+                openLightbox(index);
+            });
+        });
+
+        function openLightbox(index) {
+            const item = screenshotItems[index];
+            const img = item.querySelector('img');
+            
+            if (img) {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            }
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateLightboxArrows();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            lightboxImg.src = '';
+        }
+
+        function showPrevImage() {
+            if (currentLightboxIndex > 0) {
+                currentLightboxIndex--;
+                openLightbox(currentLightboxIndex);
+            }
+        }
+
+        function showNextImage() {
+            if (currentLightboxIndex < screenshotItems.length - 1) {
+                currentLightboxIndex++;
+                openLightbox(currentLightboxIndex);
+            }
+        }
+
+        function updateLightboxArrows() {
+            // Скрываем/показываем стрелки на краях
+            lightboxPrev.style.opacity = currentLightboxIndex === 0 ? '0.3' : '1';
+            lightboxPrev.style.pointerEvents = currentLightboxIndex === 0 ? 'none' : 'auto';
+            lightboxNext.style.opacity = currentLightboxIndex === screenshotItems.length - 1 ? '0.3' : '1';
+            lightboxNext.style.pointerEvents = currentLightboxIndex === screenshotItems.length - 1 ? 'none' : 'auto';
+        }
+
+        // Закрытие по клику на крестик
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        // Навигация стрелками
+        lightboxPrev.addEventListener('click', showPrevImage);
+        lightboxNext.addEventListener('click', showNextImage);
+
+        // Закрытие по клику на фон
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Клавиатурная навигация
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+        });
+
+        // ============================================
+        // DRAG/SWIPE в LIGHTBOX
+        // ============================================
+        let lbStartX = 0;
+        let lbIsDragging = false;
+        const swipeThreshold = 100; // Минимальное расстояние для свайпа
+
+        // Mouse drag
+        lightboxContent.addEventListener('mousedown', (e) => {
+            lbIsDragging = true;
+            lbStartX = e.clientX;
+            lightboxContent.classList.add('grabbing');
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (lbIsDragging) {
+                lbIsDragging = false;
+                lightboxContent.classList.remove('grabbing');
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!lbIsDragging) return;
+            
+            const diff = e.clientX - lbStartX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                lbIsDragging = false;
+                lightboxContent.classList.remove('grabbing');
+                
+                if (diff > 0) {
+                    showPrevImage(); // Свайп вправо = предыдущий
+                } else {
+                    showNextImage(); // Свайп влево = следующий
+                }
+            }
+        });
+
+        // Touch swipe
+        let lbTouchStartX = 0;
+
+        lightboxContent.addEventListener('touchstart', (e) => {
+            lbTouchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        lightboxContent.addEventListener('touchend', (e) => {
+            const diff = e.changedTouches[0].clientX - lbTouchStartX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    showPrevImage();
+                } else {
+                    showNextImage();
+                }
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>
