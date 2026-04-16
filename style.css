@@ -704,18 +704,26 @@ body {
     text-align: center;
 }
 
+/* ============================================
+   CLOSING CTA - финальный блок
+   Настрой расстояния между элементами ниже:
+   margin-bottom у .closing-heroine — от портрета до текста
+   margin-bottom у .closing-text      — от текста до кнопки
+   ============================================ */
 .closing-cta-row {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 0;
 }
 
 .closing-heroine {
     width: 350px;
     height: auto;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
+    /* РАССТОЯНИЕ: портрет героини → текст (десктоп) */
+    margin-bottom: -80px;
 }
 
 .closing-text {
@@ -727,7 +735,8 @@ body {
     line-height: 1.6;
     font-style: italic;
     text-align: center;
-    margin: 0;
+    /* РАССТОЯНИЕ: текст → кнопка (десктоп) */
+    margin: 0 0 80px 0;
 }
 
 .cta-button-img img {
@@ -950,16 +959,20 @@ body {
     }
 
     .closing-cta-row {
-        gap: 20px;
+        gap: 0;
     }
 
     .closing-heroine {
         width: 250px;
+        /* РАССТОЯНИЕ: портрет героини → текст (планшеты/мобилки до 768px) */
+        margin-bottom: -50px;
     }
 
     .closing-text {
         font-size: 18px;
         max-width: 90%;
+        /* РАССТОЯНИЕ: текст → кнопка (планшеты/мобилки до 768px) */
+        margin-bottom: 70px;
     }
 
     .cta-button-img img {
@@ -1076,16 +1089,20 @@ body {
     }
 
     .closing-cta-row {
-        gap: 15px;
+        gap: 0;
     }
 
     .closing-heroine {
         width: 192px;
+        /* РАССТОЯНИЕ: портрет героини → текст (маленькие мобилки до 480px) */
+        margin-bottom: -50px;
     }
 
     .closing-text {
         font-size: 16px;
         max-width: 95%;
+        /* РАССТОЯНИЕ: текст → кнопка (маленькие мобилки до 480px) */
+        margin-bottom: 40px;
     }
 
     .cta-button-img img {
