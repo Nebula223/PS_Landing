@@ -58,8 +58,11 @@
          ============================================ -->
     <section class="hero">
         <div class="hero-bg">
-            <!-- ЗАМЕНИТЬ: путь к фоновой картинке hero -->
-            <img src="images/KeyArt.jpg" alt="Pirate Ships Key Art">
+            <!-- ЗАМЕНИТЬ: пути к фоновым картинкам hero -->
+            <picture>
+                <source srcset="images/KeyArt_Mobile.jpg" media="(max-width: 480px)">
+                <img src="images/KeyArt.jpg" alt="Pirate Ships Key Art">
+            </picture>
         </div>
         
         <!-- Мерцающие звёзды на небе -->
@@ -296,14 +299,102 @@
         <div class="container">
             <div class="footer-links">
                 <!-- ЗАМЕНИТЬ: ссылки в футере -->
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link">Legal Information</a>
-                <a href="#" class="footer-link">Cookie Settings</a>
+                <a href="#" class="footer-link" data-modal="modal-privacy">Privacy Policy</a>
+                <a href="#" class="footer-link" data-modal="modal-legal">Legal Information</a>
+                <a href="#" class="footer-link" data-modal="modal-cookies">Cookie Settings</a>
             </div>
             <!-- ЗАМЕНИТЬ: копирайт -->
             <p class="footer-copyright">© 2026 Pirate Ships. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- ============================================
+         FOOTER MODALS - модалки футера
+         ============================================ -->
+
+    <!-- Privacy Policy -->
+    <div class="footer-modal" id="modal-privacy">
+        <div class="footer-modal-overlay"></div>
+        <div class="footer-modal-content">
+            <button class="footer-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="footer-modal-title">Privacy Policy</h3>
+            <div class="footer-modal-body">
+                <p><strong>Last updated:</strong> April 16, 2026</p>
+                <p>This Privacy Policy describes how Pirate Ships collects, uses, and protects your personal information when you visit our website.</p>
+                <p><strong>Information We Collect</strong></p>
+                <p>We may collect personal information such as your name, email address, and device information when you interact with our website or game services.</p>
+                <p><strong>How We Use Your Information</strong></p>
+                <p>Your information is used to provide and improve our services, communicate with you, and ensure the security of our platform.</p>
+                <p><strong>Cookies and Tracking</strong></p>
+                <p>We use cookies and similar technologies to enhance your browsing experience and analyze website traffic.</p>
+                <p><strong>Your Rights</strong></p>
+                <p>You have the right to access, update, or delete your personal information. Contact us for any privacy-related requests.</p>
+                <p><strong>Contact Us</strong></p>
+                <p>If you have any questions about this Privacy Policy, please contact us through our official channels.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Information -->
+    <div class="footer-modal" id="modal-legal">
+        <div class="footer-modal-overlay"></div>
+        <div class="footer-modal-content">
+            <button class="footer-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="footer-modal-title">Legal Information</h3>
+            <div class="footer-modal-body">
+                <p><strong>Copyright Notice</strong></p>
+                <p>All content, graphics, and materials on this website are the property of Pirate Ships and are protected by international copyright laws.</p>
+                <p><strong>Trademarks</strong></p>
+                <p>Pirate Ships and all related logos, characters, and game elements are trademarks of their respective owners.</p>
+                <p><strong>Age Restrictions</strong></p>
+                <p>This game and website are intended for users aged 13 and older. Parental guidance is recommended for younger users.</p>
+                <p><strong>Disclaimer</strong></p>
+                <p>The game is provided "as is" without warranties of any kind. We are not responsible for any damages arising from the use of our services.</p>
+                <p><strong>Governing Law</strong></p>
+                <p>These terms are governed by the laws of the jurisdiction in which the company is registered.</p>
+                <p><strong>Contact</strong></p>
+                <p>For legal inquiries, please reach out through our official support channels.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings -->
+    <div class="footer-modal" id="modal-cookies">
+        <div class="footer-modal-overlay"></div>
+        <div class="footer-modal-content">
+            <button class="footer-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="footer-modal-title">Cookie Policy</h3>
+            <div class="footer-modal-body">
+                <p><strong>What Are Cookies</strong></p>
+                <p>Cookies are small text files stored on your device that help us improve your experience on our website.</p>
+                <p><strong>Types of Cookies We Use</strong></p>
+                <p><em>Essential Cookies:</em> Required for the website to function properly. These cannot be disabled.</p>
+                <p><em>Analytics Cookies:</em> Help us understand how visitors interact with our website by collecting anonymous data.</p>
+                <p><em>Marketing Cookies:</em> Used to deliver relevant advertisements and track campaign performance.</p>
+                <p><strong>Managing Your Preferences</strong></p>
+                <p>You can manage your cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality.</p>
+                <p><strong>Third-Party Cookies</strong></p>
+                <p>Some cookies may be placed by third-party services integrated into our website, such as analytics providers.</p>
+                <p><strong>Updates</strong></p>
+                <p>This Cookie Policy may be updated periodically. Please review it regularly for any changes.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // ============================================
@@ -527,6 +618,38 @@
                 }
             }
         }, { passive: true });
+
+        // ============================================
+        // FOOTER MODALS
+        // ============================================
+        const footerLinks = document.querySelectorAll('.footer-link[data-modal]');
+        const footerModals = document.querySelectorAll('.footer-modal');
+        const footerModalCloses = document.querySelectorAll('.footer-modal-close');
+        const footerModalOverlays = document.querySelectorAll('.footer-modal-overlay');
+
+        footerLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = link.dataset.modal;
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        function closeFooterModals() {
+            footerModals.forEach(modal => modal.classList.remove('active'));
+            document.body.style.overflow = '';
+        }
+
+        footerModalCloses.forEach(btn => btn.addEventListener('click', closeFooterModals));
+        footerModalOverlays.forEach(overlay => overlay.addEventListener('click', closeFooterModals));
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeFooterModals();
+        });
     </script>
 </body>
 </html>
