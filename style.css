@@ -26,7 +26,7 @@
 :root {
     --color-bg: #0a0e17;           /* Основной фон */
     --color-bg-secondary: #0d1320; /* Фон вторичных секций */
-    --color-accent: #c9a227;       /* Золотой акцент */
+    --color-accent: #F9CE50;       /* Золотой акцент */
     --color-accent-hover: #e5c44a; /* Золотой при наведении */
     --color-text: #e8e4dc;         /* Основной текст */
     --color-text-muted: #8a8a8a;   /* Приглушенный текст */
@@ -219,10 +219,9 @@ body {
 
 .star {
     position: absolute;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
-    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.8),
-                0 0 8px 2px rgba(200, 220, 255, 0.4);
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.3);
     animation: twinkle ease-in-out infinite;
 }
 
@@ -255,7 +254,7 @@ body {
     z-index: 10;
     text-align: center;
     margin: auto;
-    padding: 60vh 24px 50px; /* Контент ещё ниже */
+    padding: 52vh 24px 50px; /* Контент ниже, но в пределах экрана */
 }
 
 .hero-title {
@@ -267,7 +266,7 @@ body {
    Измени max-width чтобы увеличить/уменьшить
    ============================================ */
 .hero-title img {
-    max-width: 200px;  /* <-- ИЗМЕНИ РАЗМЕР ЛОГОТИПА ЗДЕСЬ */
+    max-width: 320px;  /* <-- ИЗМЕНИ РАЗМЕР ЛОГОТИПА ЗДЕСЬ */
     width: 100%;
     height: auto;
     filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
@@ -727,11 +726,11 @@ body {
 }
 
 .closing-heroine {
-    width: 350px;
+    width: 420px;
     height: auto;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
     /* РАССТОЯНИЕ: портрет героини → текст (десктоп) */
-    margin-bottom: -80px;
+    margin-bottom: -40px;
 }
 
 .closing-text {
@@ -939,7 +938,7 @@ body {
     }
 
     .hero-title img {
-        max-width: 400px;
+        max-width: 320px;
     }
 }
 
@@ -982,7 +981,7 @@ body {
     }
 
     .hero-title img {
-        max-width: 180px; /* Меньше логотип */
+        max-width: 320px; /* Меньше логотип */
     }
 
     .cta-button-img img {
@@ -1109,9 +1108,9 @@ body {
     }
 
     .closing-heroine {
-        width: 250px;
+        width: 300px;
         /* РАССТОЯНИЕ: портрет героини → текст (планшеты/мобилки до 768px) */
-        margin-bottom: -50px;
+        margin-bottom: -20px;
     }
 
     .closing-text {
@@ -1151,7 +1150,7 @@ body {
     }
 
     .hero-title img {
-        max-width: 160px; /* Еще меньше логотип */
+        max-width: 240px; /* Еще меньше логотип */
     }
 
     .cta-button-img img {
@@ -1249,9 +1248,9 @@ body {
     }
 
     .closing-heroine {
-        width: 192px;
+        width: 230px;
         /* РАССТОЯНИЕ: портрет героини → текст (маленькие мобилки до 480px) */
-        margin-bottom: -50px;
+        margin-bottom: 0px;
     }
 
     .closing-text {
