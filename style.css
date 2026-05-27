@@ -319,20 +319,21 @@ body {
     position: relative;
     display: inline-flex;
     align-items: stretch;
-    height: 64px;
+    height: 90px;
     text-decoration: none;
-    border-radius: 7px;
-    transition: transform .15s;
+    border-radius: 8px;
+    border: 2px solid rgba(0,210,95,.32);
+    transition: transform .15s, border-color .3s;
 }
-.btn:hover { transform: translateY(-2px); }
+.btn:hover { transform: translateY(-2px); border-color: rgba(0,255,130,.62); }
 .btn:active { transform: translateY(1px); }
 
 .bg {
     position: absolute;
     inset: 0;
-    border-radius: 7px;
+    border-radius: 8px;
     pointer-events: none;
-    transition: all .3s;
+    transition: box-shadow .3s;
 }
 
 .btn-icon {
@@ -341,14 +342,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 62px;
-}
-
-.btn-divider {
-    position: relative;
-    z-index: 1;
-    width: 1px;
-    align-self: stretch;
+    width: 82px;
 }
 
 .btn-text-wrap {
@@ -357,33 +351,38 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 28px 0 22px;
-    gap: 2px;
+    align-items: center;
+    padding: 0 48px 0 18px;
+    gap: 6px;
+    text-align: center;
 }
 
 .btn-sub {
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    font-size: 10px;
-    letter-spacing: 2.5px;
+    font-size: 13px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     line-height: 1;
+    color: rgba(140,255,190,.65);
 }
 
 .btn-main {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
-    font-size: 19px;
-    letter-spacing: 2px;
+    font-size: 22px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    line-height: 1.15;
+    line-height: 1.1;
+    color: #aaffe0;
+    text-shadow: 0 0 10px rgba(0,255,110,.55);
+    transition: text-shadow .3s;
 }
+.btn:hover .btn-main { text-shadow: 0 0 14px rgba(0,255,120,.9), 0 0 32px rgba(0,220,78,.38); }
 
-.steam-logo { width: 26px; height: 26px; flex-shrink: 0; }
+.steam-logo { width: 38px; height: 38px; flex-shrink: 0; }
 
 /* ── Ghost Ship ── */
-.btn-ghost { border: 1px solid rgba(0,210,95,.32); transition: transform .15s, border-color .3s; }
-.btn-ghost:hover { border-color: rgba(0,255,130,.62); }
 .btn-ghost .bg {
     background: linear-gradient(150deg, #031a10 0%, #052c18 40%, #083a22 65%, #041c12 100%);
     box-shadow: 0 0 16px rgba(0,205,88,.42), 0 0 48px rgba(0,185,70,.18), inset 0 0 28px rgba(0,240,108,.04), inset 0 1px 0 rgba(0,255,118,.16);
@@ -391,10 +390,6 @@ body {
 .btn-ghost:hover .bg {
     box-shadow: 0 0 28px rgba(0,255,98,.68), 0 0 75px rgba(0,220,78,.28), inset 0 0 38px rgba(0,255,108,.09), inset 0 1px 0 rgba(0,255,128,.26);
 }
-.btn-ghost .btn-divider { background: rgba(0,190,75,.18); }
-.btn-ghost .btn-sub { color: rgba(100,255,158,.42); }
-.btn-ghost .btn-main { color: #aaffe0; text-shadow: 0 0 10px rgba(0,255,110,.55); transition: text-shadow .3s; }
-.btn-ghost:hover .btn-main { text-shadow: 0 0 14px rgba(0,255,120,.9), 0 0 32px rgba(0,220,78,.38); }
 
 .rune { position: absolute; font-size: 10px; color: rgba(0,255,100,.18); animation: rf 4s ease-in-out infinite; pointer-events: none; z-index: 0; }
 @keyframes rf { 0%,100%{opacity:.08;transform:translateY(0)} 50%{opacity:.32;transform:translateY(-3px)} }
@@ -816,13 +811,6 @@ body {
     margin: 0 0 80px 0;
 }
 
-.closing-cta .btn {
-    height: 56px;
-}
-.closing-cta .btn-main {
-    font-size: 17px;
-}
-
 /* Footer */
 .footer {
     padding: 40px 0;
@@ -1058,13 +1046,13 @@ body {
     }
 
     .btn {
-        height: 56px;
+        height: 72px;
     }
     .btn-main {
-        font-size: 16px;
+        font-size: 18px;
     }
     .btn-sub {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     /* Скрываем боковые звёзды на планшетах и мобилках */
@@ -1199,16 +1187,6 @@ body {
         margin-bottom: 70px;
     }
 
-    .closing-cta .btn {
-        height: 52px;
-    }
-    .closing-cta .btn-main {
-        font-size: 15px;
-    }
-    .closing-cta .btn-sub {
-        font-size: 8px;
-    }
-
     .footer-links {
         gap: 20px;
     }
@@ -1239,13 +1217,13 @@ body {
     }
 
     .btn {
-        height: 56px;
+        height: 68px;
     }
     .btn-main {
-        font-size: 16px;
+        font-size: 18px;
     }
     .btn-sub {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     /* Скрываем боковые звёзды на мобилках */
@@ -1349,16 +1327,6 @@ body {
         max-width: 95%;
         /* РАССТОЯНИЕ: текст → кнопка (маленькие мобилки до 480px) */
         margin-bottom: 40px;
-    }
-
-    .closing-cta .btn {
-        height: 48px;
-    }
-    .closing-cta .btn-main {
-        font-size: 14px;
-    }
-    .closing-cta .btn-sub {
-        font-size: 8px;
     }
 
     .footer-links {
