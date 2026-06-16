@@ -2,23 +2,26 @@
 <!--
     PIRATE SHIPS LANDING PAGE
     ==========================
-    Структура:
-    1. Navigation (шапка)
-    2. Hero (главный баннер)
-    3. About (описание игры)
-    4. Features (3 карточки фичей)
-    5. Screenshots (карусель скриншотов)
-    6. Closing CTA (финальный призыв)
-    7. Footer (подвал)
+    Structure:
+    1. Navigation (header)
+    2. Hero (main banner)
+    3. About (game description)
+    4. Features (3 feature cards)
+    5. Screenshots (screenshot carousel)
+    6. Closing CTA (final call-to-action)
+    7. Footer
     
-    Для редактирования ищи комментарии "ЗАМЕНИТЬ"
+    Look for "REPLACE" comments when editing
 -->
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ЗАМЕНИТЬ: заголовок страницы -->
+    <!-- REPLACE: page title -->
     <title>Pirate Ships - PvP Pirate Ship Building & Battles</title>
+    <!-- REPLACE: favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,24 +30,24 @@
 </head>
 <body>
     <!-- ============================================
-         NAVIGATION - шапка сайта
+         NAVIGATION - site header
          ============================================ -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Логотип в шапке -->
+            <!-- Header logo -->
             <a href="#" class="nav-logo">
-                <!-- ЗАМЕНИТЬ: путь к логотипу шапки -->
+                <!-- REPLACE: header logo path -->
                 <img src="images/logo_header.png" alt="Pirate Ships">
             </a>
             
-            <!-- Меню -->
+            <!-- Menu -->
             <ul class="nav-menu">
-                <!-- ЗАМЕНИТЬ: пункты меню -->
+                <!-- REPLACE: menu items -->
                 <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">Press Kit</a></li>
+                <li><a href="downloads/PirateShips_pressKit.zip" class="nav-link" download>Press Kit</a></li>
             </ul>
             
-            <!-- Кнопка мобильного меню -->
+            <!-- Mobile menu button -->
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -54,12 +57,12 @@
     </nav>
 
     <!-- ============================================
-         HERO SECTION - главный баннер
-         Замени KeyArt.jpg на свою картинку
+         HERO SECTION - main banner
+         Replace KeyArt.jpg with your own image
          ============================================ -->
     <section class="hero">
         <div class="hero-bg">
-            <!-- ЗАМЕНИТЬ: пути к фоновым картинкам hero -->
+            <!-- REPLACE: hero background image paths -->
             <picture>
                 <source srcset="images/KeyArt_Mobile.jpg" media="(max-width: 480px)">
                 <img src="images/KeyArt.jpg" alt="Pirate Ships Key Art">
@@ -69,10 +72,10 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <!-- ЗАМЕНИТЬ: путь к главному логотипу -->
+                <!-- REPLACE: main logo path -->
                 <img src="images/logo_box.png" alt="Pirate Ships">
             </h1>
-            <!-- ЗАМЕНИТЬ: ссылка на кнопке -->
+            <!-- REPLACE: button link -->
             <a href="https://store.steampowered.com/app/4011110/Pirate_Ships/" class="btn btn-ghost">
                 <div class="bg"></div>
                 <span class="rune">ᚠ</span><span class="rune">ᚢ</span><span class="rune">ᚦ</span><span class="rune">ᚨ</span>
@@ -80,49 +83,49 @@
                     <svg class="steam-logo" viewBox="0 0 24 24"><path class="s" style="fill:rgba(80,255,155,.82)" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.606 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.252 0-2.265-1.014-2.265-2.265z"/></svg>
                 </div>
                 <div class="btn-text-wrap">
-                    <span class="btn-sub">Бесплатно в Steam</span>
-                    <span class="btn-main">Играть бесплатно</span>
+                    <span class="btn-sub">Free on Steam</span>
+                    <span class="btn-main">Play for Free</span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- ============================================
-         ABOUT SECTION - описание игры
+         ABOUT SECTION - game description
          ============================================ -->
     <section class="about">
         <div class="container">
             <p class="about-text">
-                <!-- ЗАМЕНИТЬ: текст описания игры -->
-                PvP-игра о строительстве кораблей и битвах для настоящих любителей пиратской эстетики. Сражайтесь в онлайн-режиме вместе с другими игроками или побеждайте их. Примите командование над видавшей виды старой шхуной и превратите ее в самый мощный линкор на всех семи морях!
+                <!-- REPLACE: game description text -->
+                A PvP game about shipbuilding and naval battles for true lovers of pirate aesthetics. Fight in online mode alongside other players or defeat them. Take command of a weathered old schooner and turn it into the most powerful ship of the line on all seven seas!
             </p>
         </div>
     </section>
 
     <!-- ============================================
-         FEATURES SECTION - 3 карточки фичей
-         Замени картинки и текст под свои
+         FEATURES SECTION - 3 feature cards
+         Replace images and text as needed
          ============================================ -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Особенности игры</h2>
+            <h2 class="section-title">Game Features</h2>
             <div class="features-grid">
                 
                 <!-- Feature 1 -->
                 <div class="feature-card">
                     <div class="feature-card-image">
-                        <!-- ЗАМЕНИТЬ: картинка фичи 1 -->
+                        <!-- REPLACE: feature 1 image -->
                         <img src="images/feature_shipbuilding.png" alt="Ship Building" class="feature-img">
                     </div>
                     <div class="feature-card-content">
-                        <!-- ЗАМЕНИТЬ: заголовок фичи 1 -->
-                        <h3 class="feature-card-title">Создавайте мощные корабли</h3>
-                        <!-- ЗАМЕНИТЬ: текст фичи 1 -->
+                        <!-- REPLACE: feature 1 title -->
+                        <h3 class="feature-card-title">Build Powerful Ships</h3>
+                        <!-- REPLACE: feature 1 text -->
                         <p class="feature-card-text">
-                            Стройте корабли, экипируйте их пушками и снаряжением. Более десятка типов кораблей — от шхун до линкоров!
+                            Build ships, arm them with cannons and gear. More than a dozen ship types — from schooners to ships of the line!
                         </p>
                         <p class="feature-card-text">
-                            Добывайте элементы снаряжения, находите лучшие комбинации и становитесь самым сильным пиратским лордом!
+                            Farm equipment pieces, find the best combinations, and become the strongest pirate lord!
                         </p>
                     </div>
                 </div>
@@ -130,18 +133,18 @@
                 <!-- Feature 2 -->
                 <div class="feature-card">
                     <div class="feature-card-image">
-                        <!-- ЗАМЕНИТЬ: картинка фичи 2 -->
+                        <!-- REPLACE: feature 2 image -->
                         <img src="images/feature_pvp.jpg" alt="PvP Battles" class="feature-img">
                     </div>
                     <div class="feature-card-content">
-                        <!-- ЗАМЕНИТЬ: заголовок фичи 2 -->
-                        <h3 class="feature-card-title">Ожесточенные сражения</h3>
-                        <!-- ЗАМЕНИТЬ: текст фичи 2 -->
+                        <!-- REPLACE: feature 2 title -->
+                        <h3 class="feature-card-title">Fierce Battles</h3>
+                        <!-- REPLACE: feature 2 text -->
                         <p class="feature-card-text">
-                            Сражайтесь с кораблями реальных игроков. Доминируйте на арене и займите первое место в таблице лидеров.
+                            Battle real players' ships. Dominate the arena and take first place on the leaderboard.
                         </p>
                         <p class="feature-card-text">
-                            Присоединяйтесь к масштабным морским баталиям с детализированной визуализацией.
+                            Join large-scale naval battles with detailed visuals.
                         </p>
                     </div>
                 </div>
@@ -149,18 +152,18 @@
                 <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="feature-card-image">
-                        <!-- ЗАМЕНИТЬ: картинка фичи 3 -->
+                        <!-- REPLACE: feature 3 image -->
                         <img src="images/feature_pve.png" alt="PvE Campaign" class="feature-img">
                     </div>
                     <div class="feature-card-content">
-                        <!-- ЗАМЕНИТЬ: заголовок фичи 3 -->
-                        <h3 class="feature-card-title">Кампания с PvE</h3>
-                        <!-- ЗАМЕНИТЬ: текст фичи 3 -->
+                        <!-- REPLACE: feature 3 title -->
+                        <h3 class="feature-card-title">PvE Campaign</h3>
+                        <!-- REPLACE: feature 3 text -->
                         <p class="feature-card-text">
-                            Станьте частью захватывающей карибской истории. Добывайте ресурсы и получите шанс открыть легендарные корабли.
+                            Become part of an exciting Caribbean story. Farm resources and get a chance to unlock legendary ships.
                         </p>
                         <p class="feature-card-text">
-                            Бесконечные часы веселых пиратских приключений ждут вас!
+                            Endless hours of fun pirate adventures await you!
                         </p>
                     </div>
                 </div>
@@ -170,12 +173,12 @@
     </section>
 
     <!-- ============================================
-         SCREENSHOTS SECTION - карусель скриншотов
-         Добавляй/удаляй скриншоты по аналогии
+         SCREENSHOTS SECTION - screenshot carousel
+         Add/remove screenshots as needed
          ============================================ -->
     <section class="screenshots">
         <div class="container">
-            <h2 class="section-title">Скриншоты</h2>
+            <h2 class="section-title">Screenshots</h2>
             <div class="carousel-wrapper">
                 <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous screenshot">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -184,32 +187,32 @@
                 </button>
                 <div class="screenshots-carousel">
                     
-                    <!-- СКРИНШОТ 1 -->
+                    <!-- SCREENSHOT 1 -->
                     <div class="screenshot-item" data-index="0">
                         <img src="images/screenshot1.jpg" alt="Screenshot 1" class="screenshot-img">
                     </div>
                     
-                    <!-- СКРИНШОТ 2 -->
+                    <!-- SCREENSHOT 2 -->
                     <div class="screenshot-item" data-index="1">
                         <img src="images/screenshot2.jpg" alt="Screenshot 2" class="screenshot-img">
                     </div>
                     
-                    <!-- СКРИНШОТ 3 -->
+                    <!-- SCREENSHOT 3 -->
                     <div class="screenshot-item" data-index="2">
                         <img src="images/screenshot3.jpg" alt="Screenshot 3" class="screenshot-img">
                     </div>
                     
-                    <!-- СКРИНШОТ 4 -->
+                    <!-- SCREENSHOT 4 -->
                     <div class="screenshot-item" data-index="3">
                         <img src="images/screenshot4.jpg" alt="Screenshot 4" class="screenshot-img">
                     </div>
                     
-                    <!-- СКРИНШОТ 5 -->
+                    <!-- SCREENSHOT 5 -->
                     <div class="screenshot-item" data-index="4">
                         <img src="images/screenshot5.jpg" alt="Screenshot 5" class="screenshot-img">
                     </div>
                     
-                    <!-- ДОБАВИТЬ НОВЫЙ СКРИНШОТ:
+                    <!-- ADD NEW SCREENSHOT:
                     <div class="screenshot-item" data-index="5">
                         <img src="images/screenshot6.jpg" alt="Screenshot 6" class="screenshot-img">
                     </div>
@@ -228,11 +231,11 @@
     </section>
 
     <!-- ============================================
-         LIGHTBOX - просмотр скриншотов на весь экран
-         Не трогай - работает автоматически
+         LIGHTBOX - fullscreen screenshot viewer
+         Do not touch - works automatically
          ============================================ -->
     <div class="lightbox" id="lightbox">
-        <!-- Кнопка закрытия -->
+        <!-- Close button -->
         <button class="lightbox-close" aria-label="Close">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -240,41 +243,41 @@
             </svg>
         </button>
         
-        <!-- Стрелка назад -->
+        <!-- Previous arrow -->
         <button class="lightbox-arrow lightbox-arrow-prev" aria-label="Previous">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
         </button>
         
-        <!-- Стрелка вперед -->
+        <!-- Next arrow -->
         <button class="lightbox-arrow lightbox-arrow-next" aria-label="Next">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
         </button>
         
-        <!-- Контейнер для картинки -->
+        <!-- Image container -->
         <div class="lightbox-content" id="lightbox-content">
             <img src="" alt="Screenshot" class="lightbox-img" id="lightbox-img">
         </div>
     </div>
 
     <!-- ============================================
-         CLOSING CTA - финальный призыв к действию
+         CLOSING CTA - final call-to-action
          ============================================ -->
     <section class="closing-cta">
         <div class="container">
             <div class="closing-cta-row">
-                <!-- Девушка слева -->
+                <!-- Heroine on the left -->
                 <img src="images/heroine_new.png" alt="Heroine" class="closing-heroine">
                 
-                <!-- Текст по центру -->
+                <!-- Center text -->
                 <p class="closing-text">
-                    Поднимайте «Весёлого Роджера», запасайтесь крепким ромом и отправляйтесь в плавание в увлекательной пиратской авантюре!
+                    Hoist the Jolly Roger, stock up on strong rum, and set sail on an exciting pirate adventure!
                 </p>
                 
-                <!-- Кнопка справа -->
+                <!-- Button on the right -->
                 <a href="https://store.steampowered.com/app/4011110/Pirate_Ships/" class="btn btn-ghost">
                     <div class="bg"></div>
                     <span class="rune">ᚠ</span><span class="rune">ᚢ</span><span class="rune">ᚦ</span><span class="rune">ᚨ</span>
@@ -283,8 +286,8 @@
                     </div>
                     <div class="btn-divider"></div>
                     <div class="btn-text-wrap">
-                        <span class="btn-sub">Бесплатно в Steam</span>
-                        <span class="btn-main">Играть бесплатно</span>
+                        <span class="btn-sub">Free on Steam</span>
+                        <span class="btn-main">Play for Free</span>
                     </div>
                 </a>
             </div>
@@ -292,23 +295,23 @@
     </section>
 
     <!-- ============================================
-         FOOTER - подвал с ссылками
+         FOOTER - footer with links
          ============================================ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <!-- ЗАМЕНИТЬ: ссылки в футере -->
+                <!-- REPLACE: footer links -->
                 <a href="#" class="footer-link" data-modal="modal-privacy">Privacy Policy</a>
                 <a href="#" class="footer-link" data-modal="modal-legal">Legal Information</a>
                 <a href="#" class="footer-link" data-modal="modal-cookies">Cookie Settings</a>
             </div>
-            <!-- ЗАМЕНИТЬ: копирайт -->
+            <!-- REPLACE: copyright -->
             <p class="footer-copyright">© 2026 Pirate Ships. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- ============================================
-         FOOTER MODALS - модалки футера
+         FOOTER MODALS - footer modals
          ============================================ -->
 
     <!-- Privacy Policy -->
@@ -1140,7 +1143,7 @@ HeroCraft Ltd<br>
         </div>
     </div>
 
-    <!-- Мерцающие звёзды по бокам экрана -->
+    <!-- Twinkling stars along the edges of the screen -->
     <div class="stars-container stars-sides">
         <div class="star star-1"></div>
         <div class="star star-2"></div>
@@ -1170,21 +1173,21 @@ HeroCraft Ltd<br>
         const nextBtn = document.querySelector('.carousel-arrow-next');
         const items = document.querySelectorAll('.screenshot-item');
 
-        // Ширина одного скриншота + отступ
-        const scrollStep = 500; // На сколько пикселей скроллить при клике на стрелку
+        // Width of one screenshot + gap
+        const scrollStep = 500; // How many pixels to scroll on arrow click
 
-        // Стрелка "назад" - скроллим влево
+        // "Previous" arrow - scroll left
         prevBtn.addEventListener('click', () => {
             carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
         });
 
-        // Стрелка "вперед" - скроллим вправо
+        // "Next" arrow - scroll right
         nextBtn.addEventListener('click', () => {
             carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
         });
 
         // ============================================
-        // DRAG TO SCROLL (свободное перетаскивание)
+        // DRAG TO SCROLL (free dragging)
         // ============================================
         let isDown = false;
         let startX;
@@ -1211,11 +1214,11 @@ HeroCraft Ltd<br>
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - carousel.offsetLeft;
-            const walk = (x - startX) * 1.5; // множитель скорости
+            const walk = (x - startX) * 1.5; // speed multiplier
             carousel.scrollLeft = scrollLeft - walk;
         });
 
-        // Touch поддержка для мобилок
+        // Touch support for mobile
         let touchStartX;
         let touchScrollLeft;
 
@@ -1231,7 +1234,7 @@ HeroCraft Ltd<br>
         }, { passive: true });
 
         // ============================================
-        // LIGHTBOX (просмотр на весь экран)
+        // LIGHTBOX (fullscreen view)
         // ============================================
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -1243,7 +1246,7 @@ HeroCraft Ltd<br>
         let currentLightboxIndex = 0;
         const screenshotItems = Array.from(items);
 
-        // Открытие lightbox при клике на скриншот
+        // Open lightbox on screenshot click
         screenshotItems.forEach((item, index) => {
             item.addEventListener('click', () => {
                 currentLightboxIndex = index;
@@ -1286,28 +1289,28 @@ HeroCraft Ltd<br>
         }
 
         function updateLightboxArrows() {
-            // Скрываем/показываем стрелки на краях
+            // Hide/show arrows at the edges
             lightboxPrev.style.opacity = currentLightboxIndex === 0 ? '0.3' : '1';
             lightboxPrev.style.pointerEvents = currentLightboxIndex === 0 ? 'none' : 'auto';
             lightboxNext.style.opacity = currentLightboxIndex === screenshotItems.length - 1 ? '0.3' : '1';
             lightboxNext.style.pointerEvents = currentLightboxIndex === screenshotItems.length - 1 ? 'none' : 'auto';
         }
 
-        // Закрытие по клику на крестик
+        // Close on close button click
         lightboxClose.addEventListener('click', closeLightbox);
 
-        // Навигация стрелками
+        // Arrow navigation
         lightboxPrev.addEventListener('click', showPrevImage);
         lightboxNext.addEventListener('click', showNextImage);
 
-        // Закрытие по клику на фон
+        // Close on background click
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 closeLightbox();
             }
         });
 
-        // Клавиатурная навигация
+        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
             
@@ -1317,11 +1320,11 @@ HeroCraft Ltd<br>
         });
 
         // ============================================
-        // DRAG/SWIPE в LIGHTBOX
+        // DRAG/SWIPE IN LIGHTBOX
         // ============================================
         let lbStartX = 0;
         let lbIsDragging = false;
-        const swipeThreshold = 100; // Минимальное расстояние для свайпа
+        const swipeThreshold = 100; // Minimum distance for a swipe
 
         // Mouse drag
         lightboxContent.addEventListener('mousedown', (e) => {
@@ -1347,9 +1350,9 @@ HeroCraft Ltd<br>
                 lightboxContent.classList.remove('grabbing');
                 
                 if (diff > 0) {
-                    showPrevImage(); // Свайп вправо = предыдущий
+                    showPrevImage(); // Swipe right = previous
                 } else {
-                    showNextImage(); // Свайп влево = следующий
+                    showNextImage(); // Swipe left = next
                 }
             }
         });
@@ -1404,6 +1407,94 @@ HeroCraft Ltd<br>
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeFooterModals();
         });
+
+        // ============================================
+        // FEATURE CARDS SCROLL HIGHLIGHT (touch devices, single column only)
+        // Only one card active at a time, only in the central half of the screen
+        // ============================================
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+        if (isTouchDevice) {
+            const featureCards = document.querySelectorAll('.feature-card');
+            let activeFeatureCard = null;
+
+            const isSingleColumn = () => {
+                if (featureCards.length < 2) return true;
+                return featureCards[1].offsetTop > featureCards[0].offsetTop + featureCards[0].offsetHeight / 2;
+            };
+
+            const setActiveFeatureCard = (card) => {
+                if (activeFeatureCard === card) return;
+
+                if (activeFeatureCard) {
+                    activeFeatureCard.classList.remove('in-view');
+                }
+
+                activeFeatureCard = card;
+
+                if (activeFeatureCard) {
+                    activeFeatureCard.classList.add('in-view');
+                }
+            };
+
+            const updateActiveFeatureCard = () => {
+                if (!isSingleColumn()) {
+                    setActiveFeatureCard(null);
+                    return;
+                }
+
+                const viewportCenter = window.innerHeight / 2;
+                const zoneTop = window.innerHeight * 0.25;
+                const zoneBottom = window.innerHeight * 0.75;
+                let closestCard = null;
+                let closestDistance = Infinity;
+
+                featureCards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const cardCenter = rect.top + rect.height / 2;
+
+                    // Only consider cards whose center is in the central half of the screen
+                    if (cardCenter < zoneTop || cardCenter > zoneBottom) return;
+
+                    const distance = Math.abs(cardCenter - viewportCenter);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestCard = card;
+                    }
+                });
+
+                setActiveFeatureCard(closestCard);
+            };
+
+            let ticking = false;
+            const scheduleUpdate = () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateActiveFeatureCard();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            };
+
+            window.addEventListener('scroll', scheduleUpdate, { passive: true });
+            window.addEventListener('touchmove', scheduleUpdate, { passive: true });
+            window.addEventListener('resize', scheduleUpdate, { passive: true });
+
+            // IntersectionObserver as a fallback for momentum scrolling
+            const featureObserver = new IntersectionObserver(() => {
+                scheduleUpdate();
+            }, {
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+                rootMargin: '-25% 0px -25% 0px'
+            });
+
+            featureCards.forEach(card => featureObserver.observe(card));
+
+            // Initial check on load
+            updateActiveFeatureCard();
+        }
     </script>
 </body>
 </html>

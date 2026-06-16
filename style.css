@@ -1,16 +1,16 @@
 /* ============================================
    PIRATE SHIPS LANDING - CSS
    ==========================
-   Основные секции:
-   1. :root - цвета и переменные
-   2. .navbar - шапка
-   3. .hero - главный баннер
-   4. .about - описание
-   5. .features - фичи
-   6. .screenshots - карусель
-   7. .lightbox - просмотр на весь экран
-   8. .closing-cta - финальный блок
-   9. .footer - подвал
+   Main sections:
+   1. :root - colors and variables
+   2. .navbar - header
+   3. .hero - main banner
+   4. .about - description
+   5. .features - features
+   6. .screenshots - carousel
+   7. .lightbox - fullscreen view
+   8. .closing-cta - final block
+   9. .footer - footer
    ============================================ */
 
 /* Reset & Base */
@@ -21,16 +21,16 @@
 }
 
 /* ============================================
-   ЦВЕТОВАЯ СХЕМА - меняй цвета здесь
+   COLOR SCHEME - change colors here
    ============================================ */
 :root {
-    --color-bg: #0a0e17;           /* Основной фон */
-    --color-bg-secondary: #0d1320; /* Фон вторичных секций */
-    --color-accent: #F9CE50;       /* Золотой акцент */
-    --color-accent-hover: #e5c44a; /* Золотой при наведении */
-    --color-text: #e8e4dc;         /* Основной текст */
-    --color-text-muted: #8a8a8a;   /* Приглушенный текст */
-    --color-border: #1e2a3a;       /* Цвет рамок */
+    --color-bg: #0a0e17;           /* Main background */
+    --color-bg-secondary: #0d1320; /* Secondary section background */
+    --color-accent: #F9CE50;       /* Gold accent */
+    --color-accent-hover: #e5c44a; /* Gold on hover */
+    --color-text: #e8e4dc;         /* Main text */
+    --color-text-muted: #8a8a8a;   /* Muted text */
+    --color-border: #1e2a3a;       /* Border color */
     --font-heading: 'Lora', serif;
     --font-body: 'Lora', serif;
 }
@@ -180,13 +180,13 @@ body {
 }
 
 /* ============================================
-   HERO OVERLAY - затемнение фона (ВЫКЛЮЧЕНО)
+   HERO OVERLAY - background dimming (DISABLED)
    ============================================ */
 .hero-overlay {
     display: none;
 }
 
-/* Brush-разделитель на нижней границе hero */
+/* Brush separator on the bottom edge of hero */
 .hero::after {
     content: '';
     position: absolute;
@@ -201,7 +201,7 @@ body {
 }
 
 /* ============================================
-   МЕРЦАЮЩИЕ ЗВЁЗДЫ по бокам экрана
+   TWINKLING STARS along the edges of the screen
    ============================================ */
 .stars-container {
     pointer-events: none;
@@ -225,7 +225,7 @@ body {
     animation: twinkle ease-in-out infinite;
 }
 
-/* Анимация мерцания */
+/* Twinkle animation */
 @keyframes twinkle {
     0%, 100% {
         opacity: 0.3;
@@ -237,7 +237,7 @@ body {
     }
 }
 
-/* Звёзды только по левому и правому краю */
+/* Stars only along the left and right edges */
 .stars-sides .star-1 { width: 3px; height: 3px; top: 12%; left: 2%; animation-duration: 2.5s; animation-delay: 0s; }
 .stars-sides .star-2 { width: 2px; height: 2px; top: 28%; left: 5%; animation-duration: 3s; animation-delay: 0.5s; }
 .stars-sides .star-3 { width: 4px; height: 4px; top: 45%; left: 3%; animation-duration: 2s; animation-delay: 1s; }
@@ -254,7 +254,7 @@ body {
     z-index: 10;
     text-align: center;
     margin: auto;
-    padding: 52vh 24px 50px; /* Контент ниже, но в пределах экрана */
+    padding: 52vh 24px 50px; /* Content lower, but within the screen */
 }
 
 .hero-title {
@@ -262,11 +262,11 @@ body {
 }
 
 /* ============================================
-   HERO LOGO - размер главного логотипа
-   Измени max-width чтобы увеличить/уменьшить
+   HERO LOGO - main logo size
+   Change max-width to enlarge/reduce
    ============================================ */
 .hero-title img {
-    max-width: 320px;  /* <-- ИЗМЕНИ РАЗМЕР ЛОГОТИПА ЗДЕСЬ */
+    max-width: 320px;  /* <-- CHANGE LOGO SIZE HERE */
     width: 100%;
     height: auto;
     filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.8));
@@ -288,11 +288,11 @@ body {
 }
 
 /* ============================================
-   CTA BUTTON - кнопка "Play for Free"
+   CTA BUTTON - "Play for Free" button
    ============================================ */
 .cta-button {
     display: inline-block;
-    padding: 18px 50px;           /* Внутренние отступы */
+    padding: 18px 50px;           /* Inner padding */
     background: var(--color-accent);
     color: #000;
     font-family: var(--font-heading);
@@ -313,7 +313,7 @@ body {
 }
 
 /* ============================================
-   CTA BUTTON IMAGE - кнопка-картинка
+   CTA BUTTON IMAGE - image button
    ============================================ */
 .btn {
     position: relative;
@@ -411,7 +411,7 @@ body {
 }
 
 /* ============================================
-   FEATURES SECTION - 3 карточки с прямыми углами
+   FEATURES SECTION - 3 cards with straight corners
    ============================================ */
 .features {
     padding: 100px 0;
@@ -441,6 +441,31 @@ body {
 
 .feature-card:hover .feature-card-title {
     color: var(--color-accent);
+}
+
+/* Scroll highlight on touch devices (single column only) */
+.feature-card.in-view {
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 40px rgba(201, 162, 39, 0.25);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.feature-card.in-view .feature-card-title {
+    color: var(--color-accent);
+}
+
+/* Disable hover effects on touch devices to prevent stuck hover states */
+@media (hover: none) and (pointer: coarse) {
+    .feature-card:hover {
+        border-color: #4a5568;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .feature-card:hover .feature-card-title {
+        color: #a0aec0;
+    }
 }
 
 .feature-card-image {
@@ -485,7 +510,7 @@ body {
 }
 
 /* ============================================
-   Screenshots Section - с фоном
+   Screenshots Section - with background
    ============================================ */
 .screenshots {
     position: relative;
@@ -495,7 +520,7 @@ body {
     background-size: cover;
 }
 
-/* Brush-разделитель СВЕРХУ */
+/* Brush separator on TOP */
 .screenshots::before {
     content: '';
     position: absolute;
@@ -509,7 +534,7 @@ body {
     z-index: 10;
 }
 
-/* Brush-разделитель СНИЗУ */
+/* Brush separator on BOTTOM */
 .screenshots::after {
     content: '';
     position: absolute;
@@ -523,14 +548,14 @@ body {
     z-index: 10;
 }
 
-/* Заголовок - коричневый */
+/* Title - brown */
 .screenshots .section-title {
     color: #5c4033;
     text-shadow: none;
     margin-bottom: 40px;
 }
 
-/* Контейнер скриншотов - с отступами */
+/* Screenshot container - with padding */
 .screenshots .container {
     padding: 0 60px;
     max-width: 1400px;
@@ -582,12 +607,12 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Класс для состояния перетаскивания */
+/* Class for dragging state */
 .screenshots-carousel.grabbing {
     cursor: grabbing;
 }
 
-/* Скроллбар в коричневом стиле */
+/* Scrollbar in brown style */
 .screenshots-carousel::-webkit-scrollbar {
     height: 8px;
 }
@@ -657,7 +682,7 @@ body {
 
 
 /* ============================================
-   LIGHTBOX (просмотр на весь экран)
+   LIGHTBOX (fullscreen view)
    ============================================ */
 .lightbox {
     position: fixed;
@@ -709,7 +734,7 @@ body {
     height: 24px;
 }
 
-/* Стрелки навигации в lightbox */
+/* Navigation arrows in lightbox */
 .lightbox-arrow {
     position: absolute;
     top: 50%;
@@ -777,37 +802,41 @@ body {
 }
 
 /* ============================================
-   CLOSING CTA - финальный блок
-   Настрой расстояния между элементами ниже:
-   margin-bottom у .closing-heroine — от портрета до текста
-   margin-bottom у .closing-text      — от текста до кнопки
+   CLOSING CTA - final block
+   Adjust spacing between elements below:
+   margin-bottom on .closing-heroine — from portrait to text
+   margin-bottom on .closing-text      — from text to button
    ============================================ */
 .closing-cta-row {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 10px;
 }
 
 .closing-heroine {
-    width: 420px;
+    width: 700px;
+    max-width: 100%;
     height: auto;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
-    /* РАССТОЯНИЕ: портрет героини → текст (десктоп) */
-    margin-bottom: -40px;
 }
 
 .closing-text {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
     color: var(--color-text);
-    max-width: 600px;
+    max-width: 700px;
     line-height: 1.6;
     font-style: italic;
     text-align: center;
-    /* РАССТОЯНИЕ: текст → кнопка (десктоп) */
+    padding: 30px 40px;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    background: rgba(13, 19, 32, 0.85);
+    box-shadow: 0 0 30px rgba(201, 162, 39, 0.15);
+    /* SPACING: text → button (desktop) */
     margin: 0 0 80px 0;
 }
 
@@ -844,7 +873,7 @@ body {
 }
 
 /* ============================================
-   FOOTER MODALS - модалки футера
+   FOOTER MODALS - footer modals
    ============================================ */
 .footer-modal {
     position: fixed;
@@ -950,7 +979,7 @@ body {
     font-style: normal;
 }
 
-/* Скроллбар модалки */
+/* Modal scrollbar */
 .footer-modal-content::-webkit-scrollbar {
     width: 8px;
 }
@@ -969,7 +998,7 @@ body {
     background: var(--color-accent);
 }
 
-/* Десктоп: увеличиваем карточки фичей */
+/* Desktop: enlarge feature cards */
 @media (min-width: 1025px) {
     .features .container {
         max-width: 1400px;
@@ -985,13 +1014,27 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN - адаптация под экраны
+   RESPONSIVE DESIGN - screen adaptation
    ============================================ */
 
-/* Планшеты */
+/* Tablets */
 @media (max-width: 1024px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .feature-card {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .feature-card-title {
+        font-size: 20px;
+    }
+
+    .feature-card-text {
+        font-size: 15px;
     }
 
     .screenshot-item {
@@ -1003,7 +1046,7 @@ body {
     }
 }
 
-/* Мобильные устройства */
+/* Mobile devices */
 @media (max-width: 768px) {
     .nav-container {
         height: 60px;
@@ -1038,11 +1081,11 @@ body {
 
     .hero-content {
         z-index: 10;
-        padding: 50vh 20px 30px; /* Контент ниже, в области моря */
+        padding: 50vh 20px 30px; /* Content lower, in the sea area */
     }
 
     .hero-title img {
-        max-width: 320px; /* Меньше логотип */
+        max-width: 320px; /* Smaller logo */
     }
 
     .btn {
@@ -1055,7 +1098,7 @@ body {
         font-size: 12px;
     }
 
-    /* Скрываем боковые звёзды на планшетах и мобилках */
+    /* Hide side stars on tablets and mobile */
     .stars-sides {
         display: none;
     }
@@ -1128,7 +1171,7 @@ body {
         aspect-ratio: 16 / 9;
     }
 
-    /* Скрываем стрелки на мобилке */
+    /* Hide arrows on mobile */
     .carousel-arrow {
         display: none;
     }
@@ -1171,19 +1214,19 @@ body {
     }
 
     .closing-cta-row {
-        gap: 0;
+        gap: 15px;
     }
 
     .closing-heroine {
-        width: 300px;
-        /* РАССТОЯНИЕ: портрет героини → текст (планшеты/мобилки до 768px) */
-        margin-bottom: -20px;
+        width: 650px;
+        max-width: 100%;
     }
 
     .closing-text {
-        font-size: 18px;
+        font-size: 22px;
         max-width: 90%;
-        /* РАССТОЯНИЕ: текст → кнопка (планшеты/мобилки до 768px) */
+        padding: 24px 30px;
+        /* SPACING: text → button (tablets/mobile up to 768px) */
         margin-bottom: 70px;
     }
 
@@ -1205,15 +1248,15 @@ body {
     }
 }
 
-/* Маленькие мобильные */
+/* Small mobile */
 @media (max-width: 480px) {
     .hero-content {
         z-index: 10;
-        padding: 48vh 16px 25px; /* Контент ниже, в области моря */
+        padding: 48vh 16px 25px; /* Content lower, in the sea area */
     }
 
     .hero-title img {
-        max-width: 240px; /* Еще меньше логотип */
+        max-width: 240px; /* Even smaller logo */
     }
 
     .btn {
@@ -1226,7 +1269,7 @@ body {
         font-size: 12px;
     }
 
-    /* Скрываем боковые звёзды на мобилках */
+    /* Hide side stars on mobile */
     .stars-sides {
         display: none;
     }
@@ -1281,7 +1324,7 @@ body {
         aspect-ratio: 16 / 9;
     }
 
-    /* Стрелки скрыты на мобилке */
+    /* Arrows hidden on mobile */
     .carousel-arrow {
         display: none;
     }
@@ -1317,15 +1360,15 @@ body {
     }
 
     .closing-heroine {
-        width: 230px;
-        /* РАССТОЯНИЕ: портрет героини → текст (маленькие мобилки до 480px) */
-        margin-bottom: 0px;
+        width: 480px;
+        max-width: 100%;
     }
 
     .closing-text {
-        font-size: 16px;
+        font-size: 18px;
         max-width: 95%;
-        /* РАССТОЯНИЕ: текст → кнопка (маленькие мобилки до 480px) */
+        padding: 20px 24px;
+        /* SPACING: text → button (small mobile up to 480px) */
         margin-bottom: 40px;
     }
 
